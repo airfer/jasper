@@ -57,7 +57,7 @@ exclude: [vendor]
 safe: false
 lsi: false
 username: airfer
-repo: airfer.github.io
+repo: jasper
 branch: master
 relative_source: ../jasper/
 destination: ../jasper-pages/
