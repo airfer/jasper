@@ -16,10 +16,10 @@ author: 'Wang Yukun'
 nickname: neo
 bio: 'A paranormal expert and his daughter bunk in an abandoned house populated by 3 mischievous ghosts and one friendly one.'
 location: 'Beijing, China'
-url: 'http://airfer.github.io'
+url: 'http://airfer.github.io/jasper'
 image: 'assets/images/casper.png'
 
-short_url: 'airfer.github.io'
+short_url: 'airfer.github.io/jasper'
 google_analytics: UA-69281367-1
 disqus: username
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
@@ -61,8 +61,8 @@ repo: jasper
 branch: master
 relative_source: ../jasper/
 destination: ../jasper-pages/
-production_url:  https://airfer.github.io/
-source_url:      https://github.com/airfer/
+production_url:  https://airfer.github.io/jasper
+source_url:      https://github.com/airfer/jasper
 
 exclude:
   - README.md
