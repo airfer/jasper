@@ -11,19 +11,19 @@ name: 'Finding The Way Home'
 description: "A beautiful narrative written with the world's most elegant publishing platform. The story begins here."
 
 # Author's info
-author: 'Casper McFadden'
+author: 'Wang Yukun'
 # edit 'categories' in the front matter of every post to match this username
-nickname: casper
+nickname: neo
 bio: 'A paranormal expert and his daughter bunk in an abandoned house populated by 3 mischievous ghosts and one friendly one.'
-location: 'Maine, USA'
-url: 'http://airfer.github.io/jasper/'
+location: 'Beijing, China'
+url: 'http://airfer.github.io'
 image: 'assets/images/casper.png'
 
-short_url: 'airfer.github.io/jasper/'
+short_url: 'airfer.github.io'
 google_analytics: UA-69281367-1
 disqus: username
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /jasper/
+baseurl: /
 
 # Permalinks
 permalink: /:title
@@ -57,12 +57,12 @@ exclude: [vendor]
 safe: false
 lsi: false
 username: airfer
-repo: jasper
+repo: airfer.github.io
 branch: master
 relative_source: ../jasper/
 destination: ../jasper-pages/
-production_url:  https://airfer.github.io/jasper/
-source_url:      https://github.com/airfer/jasper/
+production_url:  https://airfer.github.io/
+source_url:      https://github.com/airfer/
 
 exclude:
   - README.md
