@@ -69,14 +69,13 @@ Docker Node节点主要有Celery 异步框架，Celery Worker任务，Nosetests 
 所以最后还是要考虑第一个方案。在仔细研究了rsync服务后，发现之前对rsync的研究并不深入，并不清楚rsync的差异性同步模式，通过这篇文章进行了详细的了解，[https://segmentfault.com/a/1190000002427568][4]，最后决定使用rsync的方式来进行文件同步。
 举例如下：
 
-{ % highlight shell %}
+{% highlight shell %}
 rsync -auvrtzopgP --progress --delete  --exclude "core.*"   --exclude "your/log" 192.168.56.73::root/the/des/directory/  ./ 
 #receiving incremental file list
 
 #sent 17376 bytes  received 2397856 bytes  536718.22 bytes/sec
 #total size is 17239007382  speedup is 7137.62
 {% endhighlight %}
-
 通过设置--exclude 参数可以将不需要同步的文件排除，比如日志文件，这在实践中很有用
 
 
@@ -108,7 +107,7 @@ celery -A pc_ads_distribute_worker worker -c 1 --maxtasksperchild=1 -l INFO
 - [http://www.open-open.com/lib/view/open1456539405281.html][7]
 
 关于具体的使用方法示例如下：
-{ % hightlight shell %}
+{% hightlight shell %}
 #Images查询地址：
 curl  http://192.168.56.73:5000/v2/_catalog
 #Tags查询：
