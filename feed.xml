@@ -8,6 +8,22 @@
     
       
       <item>
+        <title>Pc Ads Distribution Test</title>
+        
+          <description>&lt;p&gt;&lt;strong&gt;前言：&lt;/strong&gt;
+在基于[Docker的分布式测试系统构建（一）][1]中主要阐述了两个方面的内容，分别为开发此分布式测试系统的缘由以及docker基础镜像的构建和踩过的坑。在本篇中主要有4个部分的内容，分别为分布式测试系统的架构、技术实现细节简述、docker Node节点的部署，以及前端实现。&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 06 Nov 2016 00:00:00 +0000</pubDate>
+        <link>
+        http://airfer.github.io//pc-ads-distribution-test</link>
+        <guid isPermaLink="true">http://airfer.github.io//pc-ads-distribution-test</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>测试总结之述职杂谈</title>
         
           <description>&lt;h2 id=&quot;section&quot;&gt;&lt;strong&gt;&lt;em&gt;前言：&lt;/em&gt;&lt;/strong&gt;&lt;/h2&gt;
