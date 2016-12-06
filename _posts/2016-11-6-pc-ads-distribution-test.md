@@ -1,3 +1,15 @@
+---
+layout: post
+cover: 'assets/images/cover7.jpg'
+title: 基于 Docker 的分布式测试系统构建 (二)
+date:   2016-05-17 10:18:00
+tags: Monitor
+subclass: 'post tag-test tag-content'
+categories: 'casper'
+navigation: True
+logo: 'assets/images/ghost.png'
+---
+
 **前言：**
 在基于[Docker的分布式测试系统构建（一）][1]中主要阐述了两个方面的内容，分别为开发此分布式测试系统的缘由以及docker基础镜像的构建和踩过的坑。在本篇中主要有4个部分的内容，分别为分布式测试系统的架构、技术实现细节简述、docker Node节点的部署，以及前端实现。
 
