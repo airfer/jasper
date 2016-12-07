@@ -3,7 +3,7 @@ layout: post
 cover: 'assets/images/cover7.jpg'
 title: 测试总结之述职杂谈
 date:   2016-05-17 10:18:00
-tags: Monitor
+tags: summerize
 subclass: 'post tag-test tag-content'
 categories: 'casper'
 navigation: True

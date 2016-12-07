@@ -3,7 +3,7 @@ layout: post
 cover: 'assets/images/cover7.jpg'
 title: 基于 Docker 的分布式测试系统构建 (二)
 date:   2016-11-06 15:18:00
-tags: Docker
+tags: docker
 subclass: 'post tag-test tag-content'
 categories: 'casper'
 navigation: True
