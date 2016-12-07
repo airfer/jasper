@@ -2,8 +2,8 @@
 layout: post
 cover: 'assets/images/cover7.jpg'
 title: 基于 Docker 的分布式测试系统构建 (二)
-date:   2016-05-17 10:18:00
-tags: Monitor
+date:   2016-11-06 15:18:00
+tags: Docker
 subclass: 'post tag-test tag-content'
 categories: 'casper'
 navigation: True
@@ -70,9 +70,7 @@ Docker Node节点主要有Celery 异步框架，Celery Worker任务，Nosetests 
 举例如下：
 <pre>
 {% raw %}
-{% highlight shell %}
 rsync -auvrtzopgP --progress --delete  --exclude "core.*"   --exclude "your/log" 192.168.56.73::root/the/des/directory/  ./ 
-{% endhighlight %}
 {% endraw %}
 </pre>
 
@@ -91,9 +89,7 @@ rsync -auvrtzopgP --progress --delete  --exclude "core.*"   --exclude "your/log"
 
 <pre>
 {% raw %}
-{% highlight shell %}
 celery -A pc_ads_distribute_worker worker -c 1 --maxtasksperchild=1 -l INFO
-{% endhighlight %}
 {% endraw %}
 </pre>
 
@@ -113,7 +109,6 @@ celery -A pc_ads_distribute_worker worker -c 1 --maxtasksperchild=1 -l INFO
 关于具体的使用方法示例如下：
 <pre>
 {% raw %}
-{% hightlight shell %}
 #Images查询地址：
 curl  http://192.168.56.73:5000/v2/_catalog
 #Tags查询：
@@ -123,7 +118,6 @@ curl  http://192.168.56.73:5000/v2/pc/centos6.6_base/tags/list
 docker tag centos6.6:program_auto_v3.6 192.168.56.73:5000/pc/program_auto_v3.6
 docker push 192.168.56.73:5000/pc/program_auto_v3.6
 docker pull 192.168.56.73:5000/pc/program_auto_v3.6
-{% endhighlight %}
 {% endraw %}
 </pre>
 由于我测试系统中，并未升级到引擎的1.2.1版本，所以需要下载额外的swarm镜像来完成，关于如何通过swarm来管理docker node镜像由于比较简单，就不多写了，有兴趣的可以参考[http://dockone.io/article/227][8]来配置。
