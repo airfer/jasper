@@ -7,14 +7,14 @@ paginate: 5
 language: 'en-uk'
 
 # Website info
-name: 'Finding The Way Home'
-description: "A beautiful narrative written with the world's most elegant publishing platform. The story begins here."
+name: 'Sometimes Things Happen For A Reason'
+description: "There are some things in this world will never change and some things do change,everything that has a beginning has an end "
 
 # Author's info
 author: 'Wang Yukun'
 # edit 'categories' in the front matter of every post to match this username
 nickname: neo
-bio: 'A paranormal expert and his daughter bunk in an abandoned house populated by 3 mischievous ghosts and one friendly one.'
+bio: 'Looking up to the Starry Sky && Keep both feet firmly on the ground'
 location: 'Beijing, China'
 url: 'http://airfer.github.io/'
 image: 'assets/images/casper.png'
