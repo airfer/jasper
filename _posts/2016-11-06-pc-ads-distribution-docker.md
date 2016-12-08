@@ -109,7 +109,6 @@ celery -A pc_ads_distribute_worker worker -c 1 --maxtasksperchild=1 -l INFO
 curl  http://192.168.56.73:5000/v2/_catalog
 #Tags查询：
 curl  http://192.168.56.73:5000/v2/pc/centos6.6_base/tags/list
-
 #具体使用方法：
 docker tag centos6.6:program_auto_v3.6 192.168.56.73:5000/pc/program_auto_v3.6
 docker push 192.168.56.73:5000/pc/program_auto_v3.6
