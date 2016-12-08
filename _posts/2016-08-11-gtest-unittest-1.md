@@ -3,14 +3,14 @@ layout: post
 cover: 'assets/images/cover7.jpg'
 title: 基于 Gtest 的单元测试入门及实践 (一)
 date:   2016-08-11 10:18:00
-tags: summerize
+tags: unittest
 subclass: 'post tag-test tag-content'
 categories: 'casper'
 navigation: True
 logo: 'assets/images/ghost.png'
 ---
 <h5>前言:</h5>
-其实这并不是关于Gtest学习入门的资料，我希望读者在读这篇文件之前还是要对Googletest的单元测试框架有所了解。为了让读者比较容易理解gtest的后续实践，本系列文章分成前后两个部分，前半部分主要以gtest 所自带的samples[samples in github][1]为例，讲述一下gtest的基本用法。后半部分主要在实际应用中的gtest的用法，以及一些测试感悟，希望不要让大家失望。
+其实这并不是关于Gtest学习入门的资料，我希望读者在读这篇文件之前还是要对Googletest的单元测试框架有所了解。为了让读者比较容易理解gtest的后续实践，本系列文章分成前后两个部分，前半部分主要以gtest 所自带的samples([samples in github][1])为例，讲述一下gtest的基本用法。后半部分主要在实际应用中的gtest的用法，以及一些测试感悟，希望不要让大家失望。
 
 
 ----------
