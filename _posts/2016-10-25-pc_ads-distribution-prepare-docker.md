@@ -53,8 +53,7 @@ logo: 'assets/images/ghost.png'
 
 关于dockerfile文件的基础语法我就不再这里详述了，不懂的 搜狗（这是广告，哈哈...）一下吧。下面是我自己制作的dockerfile文件，或许对你有些帮助
 
-<pre>
-{% raw %}
+{% highlight powershell %}
 # Dockfile to install bidding module dependency
 # Based on Centos:6.5
  
@@ -81,8 +80,7 @@ RUN echo "export CC='gcc -std=gnu99'"    >> /etc/profile
 RUN echo "export CXX='g++ -std=gnu++0x'" >> /etc/profile
  
 CMD ["/bin/bash"]
-{% endraw %}
-</pre>
+{% endhighlight %}
 ***2、从安装docker到构建完镜像踩过的那些坑***
 从开始接触到后续构建完成，一路走来，跌跌撞撞，幸好问题都已解决，现就碰到的问题与大家分享一下，或许你也正被其中的某一问题所困扰
 
@@ -127,27 +125,23 @@ docker引擎的1.2.1版本集成了新的swarm，所以如果有可能还是使�
 
 - 第二种办法，就是在内网中找一台可以访问外网的机子，然后在该机子上搭建squid代理服务器，docker的宿主机可以通过配置代理来拉取镜像。关于squlid代理服务器运行可以参照一下命令:
 
-<pre>
-{% raw %}
+{% hightlight powershell %}
 docker run --name squid -d --restart=always \
   --publish 3128:3128 \
   --volume /search/wangyukun/log/cache:/var/spool/squid3 \
   --volume /search/wangyukun/log/squid_log/:/var/log/squid3 \
   sameersbn/squid:3.3.8-19
-{% endraw %}
-</pre>
+{% endhight %}
 当然前提是你已经通过第一种方法安装了squid镜像，这属于一次辛苦多次收益，哈哈，如果你们内网的所有自己都无法连接外网，那么只能通过第一种方法了。启动squid代理服务后，那么就要docker宿主机上配置代理服务，以centos6举例，修改/etc/sysconfig/docker 配置文件的内容如下：
 
-<pre>
-{% raw %}
+{% highlight powershell %}
 other_args="--graph=/search/odin/wangyukun/docker --insecure-registry 10.142.97.235:5000 --storage-driver devicemapper --storage-opt dm.basesize=100G --storage-opt dm.loopdatasize=2000G --storage-opt dm.loopmetadatasize=10G"
 HTTP_PROXY=http://your_squid_service_ip:3128
 http_proxy=$HTTP_PROXY
 HTTPS_PROXY=$HTTP_PROXY
 https_proxy=$HTTP_PROXY
 export HTTP_PROXY HTTPS_PROXY http_proxy https_proxy
-{% endraw %}
-</pre>
+{% endhighlight %}
 这样重启docker service 就可以了。镜像搭建以及走过的坑就先说到这吧，剩下的部分第二篇再续。。。
 
 
