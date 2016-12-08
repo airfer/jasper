@@ -19,8 +19,7 @@ logo: 'assets/images/ghost.png'
 
  - 例一
 主要来讲述普通函数的单元测试，主要包含3个文件，分别为sample1.h, sample1.cc , sample1_unittest.cc
-<pre>
-{% raw %}
+{% highlight cpp  %}
 /*sample1.h*/
 #ifndef GTEST_SAMPLES_SAMPLE1_H_
 #define GTEST_SAMPLES_SAMPLE1_H_
@@ -34,8 +33,7 @@ int Factorial(int n);
 bool IsPrime(int n);
 
 #endif  // GTEST_SAMPLES_SAMPLE1_H_
-{% endraw %}
-</pre>
+{% endhighlight %}
 
 <pre>
 {% raw %}
