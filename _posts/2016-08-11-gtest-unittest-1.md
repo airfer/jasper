@@ -2,7 +2,7 @@
 layout: post
 cover: 'assets/images/cover7.jpg'
 title: 基于 Gtest 的单元测试入门及实践 (一)
-date:   2016-11-26 10:18:00
+date:   2016-08-11 10:18:00
 tags: summerize
 subclass: 'post tag-test tag-content'
 categories: 'casper'
@@ -35,8 +35,7 @@ bool IsPrime(int n);
 #endif  // GTEST_SAMPLES_SAMPLE1_H_
 {% endhighlight %}
 
-<pre>
-{% raw %}
+{% highlight cpp %}
 /*samples1.cc*/
 #include "sample1.h"
 
@@ -73,11 +72,9 @@ bool IsPrime(int n) {
   // n has no integer factor in the range (1, n), and thus is prime.
   return true;
 }
-{% endraw %}
-</pre>
+{% endhighlight %}
 
-<pre>
-{% raw %}
+{% highlight cpp %}
 /*sample1_unittest.cc*/
 // This sample shows how to write a simple unit test for a function,
 // using Google C++ testing framework.
@@ -230,14 +227,14 @@ TEST(IsPrimeTest, Positive) {
 // 由于我们不许要注册这些测试，RUN_ALL_TESTS()就全部替我们做好，所以此框架
 // 使用起来非常的方便。
 
-{% endraw %}
-</pre>
+{% endhighlight %}
 
 例一中主要阐述了如何根据gtest来编写一个简单的单元测试。关于一些注意事项在技术细节中已经阐述清楚，这样看来单元测试不难吧^^。有一点需要多注意一些，在上文中也提到了，测试用例集与测试用例的关系，在实际测试中，尽量将相关的测试用例放在一个测试用例集里面，这样方便管理，如果出现问题，定位以及调试问题都比较方便。
 
 可以看到，我们本例子，我们并没有添加main函数，在第三步的论述中也阐明了原因。但是如果我们的程序中存在main函数，那么在链接的时候就不要去链接gest_main.cc文件，否则会报错.
 
 
+{% highlight powershell %}
 #makefile文件部分
 gtest-all.o : $(GTEST_SRCS_)
 	$(CXX) $(CPPFLAGS) -I$(GTEST_DIR) $(CXXFLAGS) -c \
@@ -269,13 +266,13 @@ sample1_unittest : sample1.o sample1_unittest.o gtest_main.a
 
 从上述makefile文件的最后看到，在链接生成sample1_unittest可执行文件的时候，链接的是gtest_main.a的静态链接库。如果我们的自定义程序中包含main函数，那么这个地方就需要链接gtest.a的静态链接库。
 
+{% endhighlight %}
 make之后运行的结果下图所示:
 ![](/images/unittest/1.png)
 
  - 例2 主要来讲述类中的成员函数如何进行单元测试，也包含3个文件，分别为sample2.h, sample2.cc , sample2_unittest.cc
 
-<pre>
-{% raw %}
+{% highlight cpp %}
 /*sample2.h*/
 #ifndef GTEST_SAMPLES_SAMPLE2_H_
 #define GTEST_SAMPLES_SAMPLE2_H_
@@ -462,8 +459,8 @@ TEST(MyString, Set) {
   s.Set(NULL);
   EXPECT_STREQ(NULL,s.c_string());
 }
-{% endraw %}
-</pre>
+{% endhighlight %}
+
 sample2的运行截图：
 ![](/images/unittest/2.png)
 

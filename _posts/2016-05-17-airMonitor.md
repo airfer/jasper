@@ -1,7 +1,7 @@
 ---
 layout: post
 cover: 'assets/images/cover7.jpg'
-title: 第十章 轻量级日志监控框架AirMonitor
+title: 轻量级日志监控框架airMonitor
 date:   2016-05-17 10:18:00
 tags: monitor
 subclass: 'post tag-test tag-content'
