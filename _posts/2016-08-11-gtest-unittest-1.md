@@ -263,10 +263,9 @@ sample1_unittest.o : $(USER_DIR)/sample1_unittest.cc \
 
 sample1_unittest : sample1.o sample1_unittest.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
-
+{% endhighlight %}
 从上述makefile文件的最后看到，在链接生成sample1_unittest可执行文件的时候，链接的是gtest_main.a的静态链接库。如果我们的自定义程序中包含main函数，那么这个地方就需要链接gtest.a的静态链接库。
 
-{% endhighlight %}
 make之后运行的结果下图所示:
 ![](/images/unittest/1.png)
 
@@ -465,4 +464,7 @@ sample2的运行截图：
 ![](/images/unittest/2.png)
 
 例一阐述的是如果对普通的函数进行单元测试，而例二则阐述如何对类中的成员函数进行单元测试。大致的方法基本相同，只不过在测试类成员函数之前，要先定义类，也就是例子中的MyString s;上述两个例子是gtest的简单应用，当然对于类中成员函数的单元测试要复杂的多，比如成员函数的公有还是私有，成员函数的耦合性等等，这些会在最后的单元测试实践中讨论。好了，初步的介绍就到这吧~
+
+
+
   [1]: https://github.com/google/googletest/tree/master/googletest/samples
