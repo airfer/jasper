@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images/cover7.jpg'
+cover: 'assets/images/new-pic-5.jpg'
 title: 测试总结之述职杂谈
 date:   2016-11-26 10:18:00
 tags: summerize

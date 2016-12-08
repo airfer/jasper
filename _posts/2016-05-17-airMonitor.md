@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images/cover7.jpg'
+cover: 'assets/images/new-pic-1.jpg'
 title: 轻量级日志监控框架airMonitor
 date:   2016-05-17 10:18:00
 tags: monitor

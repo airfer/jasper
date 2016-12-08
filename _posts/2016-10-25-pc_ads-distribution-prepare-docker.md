@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images/yourname.jpg'
+cover: 'assets/images/new-pic-4.jpg'
 title: 基于 Docker 的分布式测试系统构建 (一)
 date:   2016-10-25 19:18:00
 tags: docker

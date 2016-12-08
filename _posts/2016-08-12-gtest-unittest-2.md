@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images/cover7.jpg'
+cover: 'assets/images/new-pic-3.jpg'
 title: 基于 Gtest 的单元测试入门及实践 (二)
 date:   2016-08-12 18:18:00
 tags: unittest
