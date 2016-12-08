@@ -1,7 +1,7 @@
 ---
 layout: post
 cover: 'assets/images/cover7.jpg'
-title: 测试总结之述职杂谈
+title: 基于 Gtest 的单元测试入门及实践 (一)
 date:   2016-11-26 10:18:00
 tags: summerize
 subclass: 'post tag-test tag-content'
@@ -234,13 +234,12 @@ TEST(IsPrimeTest, Positive) {
 
 {% endraw %}
 </pre>
+
 例一中主要阐述了如何根据gtest来编写一个简单的单元测试。关于一些注意事项在技术细节中已经阐述清楚，这样看来单元测试不难吧^^。有一点需要多注意一些，在上文中也提到了，测试用例集与测试用例的关系，在实际测试中，尽量将相关的测试用例放在一个测试用例集里面，这样方便管理，如果出现问题，定位以及调试问题都比较方便。
 
 可以看到，我们本例子，我们并没有添加main函数，在第三步的论述中也阐明了原因。但是如果我们的程序中存在main函数，那么在链接的时候就不要去链接gest_main.cc文件，否则会报错.
 
 
-<pre>
-{% raw %}
 #makefile文件部分
 gtest-all.o : $(GTEST_SRCS_)
 	$(CXX) $(CPPFLAGS) -I$(GTEST_DIR) $(CXXFLAGS) -c \
@@ -269,8 +268,6 @@ sample1_unittest.o : $(USER_DIR)/sample1_unittest.cc \
 
 sample1_unittest : sample1.o sample1_unittest.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
-{% endraw %}
-</pre>
 
 从上述makefile文件的最后看到，在链接生成sample1_unittest可执行文件的时候，链接的是gtest_main.a的静态链接库。如果我们的自定义程序中包含main函数，那么这个地方就需要链接gtest.a的静态链接库。
 
@@ -342,11 +339,7 @@ class MyString {
   void Set(const char* c_string);
 };
 #endif  // GTEST_SAMPLES_SAMPLE2_H_
-{% endraw %}
-</pre>
 
-<pre>
-{% raw %}
 /*sample2.cc*/
 #include "sample2.h"
 
@@ -371,11 +364,7 @@ void MyString::Set(const char* a_c_string) {
   delete[] c_string_;
   c_string_ = temp;
 }
-{% endraw %}
-</pre>
 
-<pre>
-{% raw %}
 /*sample2_unittest.cc*/
 // This sample shows how to write a more complex unit test for a class
 // that has multiple member functions.
