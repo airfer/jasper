@@ -70,8 +70,7 @@ Docker Node节点主要有Celery 异步框架，Celery Worker任务，Nosetests 
 举例如下：
 {% highlight powershell %}
 rsync -auvrtzopgP --progress --delete  --exclude "core.*"   --exclude "your/log" 192.168.56.73::root/the/des/directory/  ./ 
-{% endraw %}
-<% endlighlight %>
+<% endhighlight %>
 
 通过设置--exclude 参数可以将不需要同步的文件排除，比如日志文件，这在实践中很有用
 
