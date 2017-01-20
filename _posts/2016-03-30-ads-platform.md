@@ -3,7 +3,7 @@ layout: post
 cover: 'assets/images/new-pic-7.jpg'
 title:  广告平台系统架构实现
 date:   2016-03-30 15:18:00
-tags: pay
+tags:   ads
 subclass: 'post tag-test tag-content'
 categories: 'casper'
 navigation: True
