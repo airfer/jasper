@@ -1,7 +1,7 @@
 ---
 layout: post
 cover: 'assets/images/new-pic-12.jpg'
-title: [年终总结]2016，写在农历鸡年之前
+title: [年终总结]2016,写在农历鸡年之前
 date:   2017-01-26 10:18:00
 tags: summerize
 subclass: 'post tag-test tag-content'
