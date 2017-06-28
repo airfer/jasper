@@ -2,13 +2,14 @@
 layout: post
 cover: 'assets/images/new-pic-17.jpg'
 title: '基于Ansible && Docker的分布式系统(下)'
-date:   2017-06-28 17:19:00
+date:   2017-06-28 17:28:00
 tags: summerize
 subclass: 'post tag-test tag-content'
 categories: 'casper'
 navigation: True
 logo: 'assets/images/ghost.png'
 ---
+
 <h4>前言：</h4>
 在上一篇中，我们主要从Poster入手，然后讲述了为何进行这样的技术选型，分别从docker和ansible两个方面来阐述了原因，本篇的重点在于分析集成于镜像中的Unicorn工程，以及playbook脚本的编写。
 
@@ -28,7 +29,7 @@ logo: 'assets/images/ghost.png'
 
 ![](/images/unicorn/flow.jpg)
 
-将该流程可以简单描述为 加载并解析配置文件--> 获取broker队列等相关信息 ---> 启动worker --> 执行任务  --> 结果数据处理
+将该流程可以简单描述为 加载并解析配置文件 --> 获取broker队列等相关信息 --> 启动worker --> 执行任务  --> 结果数据处理
 其中需要对Script模块进行解释一下，这个模块存在的目的在于worker执行之前，以及执行完写入数据之前对数据进行一些必要的操作，包括清除脏数据，筛出符合条件的数据等。由于采用的是插件话设计，在APP主程序不需要变动的情况下，只需要变动conf文件，以及添加script脚本就可以完成上述操作。这给后续一些数据预处理操作提供了接口。
 
 
