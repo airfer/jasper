@@ -942,7 +942,7 @@ body.nav-opened .nav {
 /*}*/
 
 body:not(.post-template) .post-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .post-title a {
@@ -951,7 +951,7 @@ body:not(.post-template) .post-title {
 
 .post-excerpt p {
     margin: 0;
-    font-size: 0.9em;
+    font-size: 1.05em;
     line-height: 1.7em;
 }
 
