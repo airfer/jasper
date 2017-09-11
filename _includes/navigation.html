@@ -5,12 +5,11 @@
     </a>
     <ul>
         <li class="nav-home {% if page.current == 'home' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}">Home</a></li>
-        <li class="nav-about {% if page.current == 'about' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}about">About</a></li>
+        <li class="nav-summerize {% if page.current == 'summerize' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag/summerize">Summerize</a></li>
+        <li class="nav-docker {% if page.url contains 'docker' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag/docker">Docker&K8s</a></li>
         <li class="nav-Monitor {% if page.url contains 'Monitor' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag/monitor">Monitor</a></li>
-        <li class="nav-docker {% if page.url contains 'docker' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag/docker">Docker</a></li>
         <li class="nav-unittest {% if page.url contains 'unittest' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag/unittest">Unittest</a></li>
-        <li class="nav-unittest {% if page.url contains 'pay' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag/pay">Pay</a></li>
-        <li class="nav-author {% if page.current == 'author' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}author/casper">Author</a></li>
+        <li class="nav-pay {% if page.url contains 'pay' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}tag/pay">Pay</a></li>
     </ul>
     <a class="subscribe-button icon-feed" href="{{ site.baseurl }}feed.xml">Subscribe</a>
 </div>

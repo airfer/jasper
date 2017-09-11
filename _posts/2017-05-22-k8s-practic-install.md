@@ -3,7 +3,7 @@ layout: post
 cover: 'assets/images/new-pic-16.jpg'
 title: 'k8s实践日记之安装篇'
 date:   2017-05-22 17:45:00
-tags:   summerize
+tags:   docker
 subclass: 'post tag-test tag-content'
 categories: 'casper'
 navigation: True

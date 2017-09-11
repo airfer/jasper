@@ -3,7 +3,7 @@ layout: post
 cover: 'assets/images/new-pic-15.jpg'
 title: '基于Ansible && Docker的分布式系统(上)'
 date:   2017-03-25 17:19:00
-tags: summerize
+tags: docker
 subclass: 'post tag-test tag-content'
 categories: 'casper'
 navigation: True
